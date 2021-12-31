@@ -1,0 +1,356 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  xmlns:app="http://schemas.android.com/apk/res-auto">
+  <androidx.constraintlayout.widget.ConstraintLayout
+    android:id="@+id/constraintLayout"
+    android:layout_width="match_parent"
+    android:layout_height="80dp"
+    android:background="@drawable/bg_toolbar"
+    android:gravity="center|center_horizontal"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent">
+
+    <androidx.appcompat.widget.AppCompatImageButton
+      android:id="@+id/img_info"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:scaleType="centerCrop"
+      android:layout_marginRight="16dp"
+      android:background="@null"
+      android:foreground="?attr/actionBarItemBackground"
+      android:minWidth="32dp"
+      android:minHeight="32dp"
+      android:src="@drawable/ic_outline_info_24"
+      android:textStyle="bold"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintTop_toTopOf="parent"
+      tools:ignore="SpeakableTextPresentCheck" />
+
+
+    <TextView
+      android:id="@+id/txt_activity_result"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="ثبت اطلاعات"
+      android:textColor="@color/white"
+      android:textSize="18sp"
+      android:textStyle="bold"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintEnd_toStartOf="@+id/img_info"
+      app:layout_constraintHorizontal_bias="0.5"
+      app:layout_constraintStart_toEndOf="@+id/img_share"
+      app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatImageButton
+      android:id="@+id/img_share"
+      android:layout_width="50dp"
+      android:layout_height="50dp"
+      android:scaleType="centerCrop"
+      android:layout_marginLeft="16dp"
+      android:background="@null"
+      android:foreground="?attr/actionBarItemBackground"
+      android:minWidth="48dp"
+      android:minHeight="48dp"
+      android:src="@drawable/ic_baseline_chevron_left_24"
+      android:textStyle="bold"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent"
+      tools:ignore="SpeakableTextPresentCheck" />
+
+
+  </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+  <TextView
+    android:id="@+id/btn_enter_excel"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:paddingHorizontal="20dp"
+    android:layout_marginRight="16dp"
+    android:paddingVertical="12dp"
+    android:textColor="@color/white"
+    android:layout_marginTop="16dp"
+    android:background="@drawable/bg_button_gradient"
+    android:text="ورود اکسل"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/constraintLayout" />
+
+
+
+
+
+  <TextView
+    android:id="@+id/btn_save"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:paddingHorizontal="32dp"
+    android:paddingVertical="12dp"
+    android:layout_marginStart="16dp"
+    android:textColor="@color/white"
+    android:layout_marginTop="16dp"
+    android:background="@drawable/bg_button_gradient"
+    android:text="ثبت"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/constraintLayout" />
+
+
+
+  <androidx.appcompat.widget.AppCompatEditText
+    android:id="@+id/edt_space_name"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingVertical="16dp"
+    android:inputType="text"
+    android:paddingHorizontal="8dp"
+    android:background="@drawable/bg_item_rv_active_step_circle"
+    android:layout_marginStart="16dp"
+    android:layout_marginEnd="16dp"
+    android:hint="نام خوراک"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintHorizontal_bias="0.0"
+    android:layout_marginTop="16dp"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/btn_enter_excel" />
+
+  <androidx.appcompat.widget.AppCompatEditText
+    android:id="@+id/edt_full_value_price"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="32dp"
+    android:layout_marginEnd="32dp"
+    android:background="@drawable/bg_edt_color"
+    android:inputType="text"
+    android:paddingHorizontal="8dp"
+    android:paddingVertical="16dp"
+    android:textColor="@color/white"
+    app:layout_constraintBottom_toBottomOf="@+id/txt_eat_full_price"
+    app:layout_constraintEnd_toStartOf="@+id/txt_eat_full_price"
+    app:layout_constraintHorizontal_bias="0.0"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="@+id/txt_eat_full_price" />
+
+  <androidx.appcompat.widget.AppCompatEditText
+    android:id="@+id/edt_full_value_eat2"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="32dp"
+    android:layout_marginTop="16dp"
+    android:layout_marginEnd="32dp"
+    android:background="@drawable/bg_edt_color"
+    android:inputType="text"
+    android:paddingHorizontal="8dp"
+    android:paddingVertical="16dp"
+    android:textColor="@color/white"
+    app:layout_constraintEnd_toStartOf="@+id/txt_eat_full_value"
+    app:layout_constraintHorizontal_bias="0.0"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/constraintLayout3" />
+
+  <TextView
+    android:id="@+id/txt_type_cow_category"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="16dp"
+    android:text="نام خوراک"
+    android:textColor="@color/blue"
+    android:textSize="28sp"
+    android:layout_marginTop="16dp"
+    android:textStyle="bold"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/edt_space_name" />
+
+
+  <androidx.appcompat.widget.AppCompatEditText
+    android:id="@+id/edt_number_space"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="4dp"
+    android:layout_marginEnd="16dp"
+    android:background="@drawable/bg_item_rv_active_step_circle"
+    android:hint="شماره سالن"
+    android:inputType="number"
+    android:paddingHorizontal="8dp"
+    android:paddingVertical="16dp"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toEndOf="@+id/edt_value_eat"
+    app:layout_constraintTop_toBottomOf="@+id/txt_type_cow_category" />
+
+
+  <androidx.appcompat.widget.AppCompatEditText
+    android:id="@+id/edt_value_eat"
+    android:layout_width="58dp"
+    android:layout_height="0dp"
+    android:layout_marginHorizontal="8dp"
+    android:layout_marginStart="16dp"
+    android:background="@drawable/bg_item_rv_active_step_circle"
+    android:hint="حجم"
+    android:inputType="number"
+    android:paddingHorizontal="8dp"
+    android:paddingVertical="16dp"
+    app:layout_constraintBottom_toBottomOf="@+id/edt_number_space"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/txt_type_cow_category" />
+
+  <TextView
+    android:id="@+id/txt_type_cow_category2"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="16dp"
+    android:text="نام خوراک"
+    android:layout_marginTop="16dp"
+    android:textColor="@color/blue"
+    android:textSize="28sp"
+    android:textStyle="bold"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/edt_number_space" />
+
+  <androidx.constraintlayout.widget.ConstraintLayout
+    android:id="@+id/constraintLayout3"
+    android:layout_width="match_parent"
+    android:layout_height="250dp"
+    android:layout_marginStart="16dp"
+    android:layout_marginTop="8dp"
+    android:layout_marginEnd="16dp"
+    android:layout_marginBottom="16dp"
+    android:background="@drawable/bg_item_rv_active_step_circle"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/txt_type_cow_category2"
+    app:layout_constraintVertical_bias="0.0">
+
+
+    <TextView
+      android:id="@+id/txt_eat"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginHorizontal="16dp"
+      android:layout_marginTop="16dp"
+      android:layout_marginEnd="16dp"
+      android:text="خوراکی"
+      android:textColor="@color/blue"
+      android:textSize="18sp"
+      android:textStyle="bold"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+      android:id="@+id/txt_eat_value"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginHorizontal="16dp"
+      android:layout_marginTop="16dp"
+      android:text="مقدار"
+      android:textColor="@color/blue"
+      android:textSize="18sp"
+      android:textStyle="bold"
+      app:layout_constraintEnd_toStartOf="@+id/txt_eat"
+      app:layout_constraintStart_toEndOf="@+id/txt_eat_price"
+      app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+      android:id="@+id/txt_eat_price"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginHorizontal="16dp"
+      android:layout_marginStart="16dp"
+      android:layout_marginTop="16dp"
+      android:text="قیمت به ازای هر کیلو"
+      android:textColor="@color/blue"
+      android:textSize="18sp"
+      android:textStyle="bold"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+      android:id="@+id/view"
+      android:layout_width="match_parent"
+      android:layout_height="1dp"
+      android:layout_marginTop="24dp"
+      android:background="#888888"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/txt_eat_price" />
+
+    <androidx.appcompat.widget.AppCompatEditText
+      android:id="@+id/edt_eat_value"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="16dp"
+      android:layout_marginEnd="8dp"
+      android:background="@drawable/bg_item_rv_active_step_circle"
+      android:inputType="number"
+      android:paddingHorizontal="8dp"
+      android:paddingVertical="16dp"
+      app:layout_constraintEnd_toEndOf="@+id/txt_eat_price"
+      app:layout_constraintStart_toStartOf="@+id/txt_eat_price"
+      app:layout_constraintTop_toBottomOf="@+id/view"
+      tools:ignore="SpeakableTextPresentCheck" />
+
+    <androidx.appcompat.widget.AppCompatEditText
+      android:id="@+id/edt_eat_value2"
+      android:layout_width="85dp"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="15dp"
+      android:background="@drawable/bg_item_rv_active_step_circle"
+      android:inputType="number"
+      android:paddingHorizontal="8dp"
+      android:paddingVertical="16dp"
+      app:layout_constraintEnd_toEndOf="@+id/txt_eat_value"
+      app:layout_constraintTop_toBottomOf="@+id/view"
+      tools:ignore="SpeakableTextPresentCheck" />
+
+    <androidx.appcompat.widget.AppCompatEditText
+      android:id="@+id/edt_eat_name2"
+      android:layout_width="85dp"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="18dp"
+      android:background="@drawable/bg_item_rv_active_step_circle"
+      android:inputType="number"
+      android:paddingHorizontal="8dp"
+      android:paddingVertical="16dp"
+      app:layout_constraintEnd_toEndOf="@+id/txt_eat"
+      app:layout_constraintTop_toBottomOf="@+id/view"
+      tools:ignore="SpeakableTextPresentCheck" />
+
+  </androidx.constraintlayout.widget.ConstraintLayout>
+
+  <TextView
+    android:id="@+id/txt_eat_full_value"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="16dp"
+    android:layout_marginTop="32dp"
+    android:layout_marginEnd="16dp"
+    android:text="مقدار کل خوراک"
+    android:textColor="@color/blue"
+    android:textSize="18sp"
+    android:textStyle="bold"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/constraintLayout3" />
+
+  <TextView
+    android:id="@+id/txt_eat_full_price"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="16dp"
+    android:layout_marginTop="32dp"
+    android:layout_marginEnd="16dp"
+    android:text="قیمت کل خوراک"
+    android:textColor="@color/blue"
+    android:textSize="18sp"
+    android:textStyle="bold"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/txt_eat_full_value" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,5 +1,4 @@
 <resources>
-  <string name="app_name">Drawer Menu</string>
-  <string name="open">menu_open</string>
-  <string name="close">menu_close</string>
+  <string name="app_name">Work2</string>
+  <string name="message_result">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown.</string>
 </resources>

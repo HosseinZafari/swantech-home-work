@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  tools:context=".MainActivity">
+
+
+  <androidx.recyclerview.widget.RecyclerView
+    android:id="@+id/rv_ticket"
+    tools:listitem="@layout/item_rv_ticket_user_msg"
+    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent" />
+
+
+  <androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingVertical="8dp"
+    android:orientation="horizontal"
+    android:gravity="center_vertical"
+    app:layout_constraintBottom_toBottomOf="@+id/rv_ticket"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent">
+
+    <androidx.appcompat.widget.AppCompatEditText
+      android:id="@+id/edt_msg"
+      android:layout_width="match_parent"
+      android:layout_height="50dp"
+      android:layout_marginHorizontal="8dp"
+      android:layout_marginVertical="4dp"
+      android:layout_marginStart="16dp"
+      android:layout_marginEnd="16dp"
+      android:layout_marginBottom="8dp"
+      android:textColor="@color/gray"
+      android:textSize="18sp"
+      android:text="hello"
+      android:layout_weight=".97"
+      android:background="@drawable/bg_gradient_edt"
+      android:paddingLeft="16dp"
+      android:paddingRight="52dp"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatImageButton
+      android:id="@+id/img_send"
+      android:layout_width="52dp"
+      android:layout_height="52dp"
+      android:background="@drawable/bg_gradient_send"
+      android:src="@drawable/ic_send_msg"
+      app:layout_constraintBottom_toBottomOf="@+id/edt_msg"
+      app:layout_constraintEnd_toEndOf="@+id/edt_msg"
+      app:layout_constraintTop_toTopOf="@+id/edt_msg" />
+
+  </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  xmlns:app="http://schemas.android.com/apk/res-auto">
+  <androidx.constraintlayout.widget.ConstraintLayout
+    android:id="@+id/constraintLayout"
+    android:layout_width="match_parent"
+    android:layout_height="80dp"
+    android:background="@drawable/bg_toolbar_eat"
+    android:gravity="center|center_horizontal"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent">
+
+    <androidx.appcompat.widget.AppCompatImageButton
+      android:id="@+id/img_info"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:scaleType="centerCrop"
+      android:background="@null"
+      android:layout_marginRight="16dp"
+      android:foreground="?attr/actionBarItemBackground"
+      android:minWidth="32dp"
+      android:minHeight="32dp"
+      android:src="@drawable/ic_outline_info_24"
+      android:textStyle="bold"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintTop_toTopOf="parent" />
+
+
+    <TextView
+      android:id="@+id/txt_activity_result"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="ثبت اطلاعات"
+      android:textColor="@color/white"
+      android:textSize="18sp"
+      android:textStyle="bold"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintEnd_toStartOf="@+id/img_info"
+      app:layout_constraintHorizontal_bias="0.5"
+      app:layout_constraintStart_toEndOf="@+id/img_share"
+      app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatImageButton
+      android:id="@+id/img_share"
+      android:layout_width="50dp"
+      android:layout_height="50dp"
+      android:layout_marginLeft="16dp"
+      android:scaleType="centerCrop"
+      android:background="@null"
+      android:foreground="?attr/actionBarItemBackground"
+      android:minWidth="48dp"
+      android:minHeight="48dp"
+      android:src="@drawable/ic_baseline_chevron_left_24"
+      android:textStyle="bold"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent" />
+
+
+  </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+  <TextView
+    android:id="@+id/btn_new_submit"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="16dp"
+    android:paddingHorizontal="16dp"
+    android:paddingVertical="10dp"
+    android:layout_marginEnd="16dp"
+    android:textColor="@color/white"
+    android:background="@drawable/bg_button_gradient"
+    android:text="ثبت جدید"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/constraintLayout" />
+
+  <TextView
+    android:id="@+id/btn_changes_submit"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:paddingHorizontal="16dp"
+    android:paddingVertical="10dp"
+    android:layout_marginStart="16dp"
+    android:textColor="@color/white"
+    android:layout_marginTop="16dp"
+    android:background="@drawable/bg_button_gradient"
+    android:text="ثبت تغییرات"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/constraintLayout" />
+
+  <TextView
+    android:id="@+id/txt_type_cow_category"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="16dp"
+    android:text="نوع دسته گاو"
+    android:textColor="@color/blue"
+    android:textSize="28sp"
+    android:layout_marginTop="16dp"
+    android:textStyle="bold"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/btn_new_submit" />
+
+
+  <RadioGroup
+    android:id="@+id/radioGroup"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:orientation="horizontal"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/txt_type_cow_category">
+
+    <androidx.appcompat.widget.AppCompatRadioButton
+      android:id="@+id/radiobtn_shiri"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginHorizontal="16dp"
+      android:checked="true"
+      android:text="شیری"
+      android:textColor="@color/blue"
+      android:textSize="22sp"
+      android:textStyle="bold" />
+
+    <androidx.appcompat.widget.AppCompatRadioButton
+      android:id="@+id/radiobtn_no_shiri"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginHorizontal="16dp"
+      android:text="غیر شیری"
+      android:textColor="@color/blue"
+      android:textSize="22sp"
+      android:textStyle="bold" />
+  </RadioGroup>
+
+
+  <androidx.appcompat.widget.AppCompatEditText
+    android:id="@+id/edt_space_name"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingVertical="16dp"
+    android:inputType="text"
+    android:paddingHorizontal="8dp"
+    android:background="@drawable/bg_item_rv_active_step_circle"
+    android:layout_marginStart="16dp"
+    android:layout_marginEnd="16dp"
+    android:hint="نام سالن"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintHorizontal_bias="0.0"
+    android:layout_marginTop="16dp"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/edt_cow_category" />
+
+  <androidx.appcompat.widget.AppCompatEditText
+    android:id="@+id/edt_cow_category"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:inputType="text"
+    android:layout_marginStart="16dp"
+    android:layout_marginTop="16dp"
+    android:paddingVertical="16dp"
+    android:paddingHorizontal="8dp"
+    android:background="@drawable/bg_item_rv_active_step_circle"
+    android:layout_marginEnd="16dp"
+    android:hint="دسته گاو"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/radioGroup" />
+
+  <androidx.appcompat.widget.AppCompatEditText
+    android:id="@+id/edt_number_space"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:inputType="number"
+    android:paddingVertical="16dp"
+    android:paddingHorizontal="8dp"
+    android:background="@drawable/bg_item_rv_active_step_circle"
+    android:layout_marginStart="16dp"
+    android:layout_marginTop="16dp"
+    android:layout_marginEnd="16dp"
+    android:hint="شماره سالن"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintHorizontal_bias="0.0"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/edt_space_name" />
+
+  <androidx.appcompat.widget.AppCompatEditText
+    android:id="@+id/edt_number_dam"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:inputType="number"
+    android:paddingVertical="16dp"
+    android:paddingHorizontal="8dp"
+    android:background="@drawable/bg_item_rv_active_step_circle"
+    android:layout_marginStart="16dp"
+    android:layout_marginTop="16dp"
+    android:layout_marginEnd="16dp"
+    android:hint="تعداد دام"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintHorizontal_bias="0.0"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/edt_number_space" />
+
+
+  <TextView
+    android:id="@+id/txt_select_type_eat"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="16dp"
+    android:layout_marginTop="16dp"
+    android:text="انتخاب خوراک"
+    android:textColor="@color/blue"
+    android:textSize="28sp"
+    android:textStyle="bold"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/edt_number_dam" />
+
+
+  <Spinner
+    android:id="@+id/spinner"
+    android:layout_marginHorizontal="16dp"
+    android:background="@drawable/bg_item_rv_active_step_circle"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:gravity="right"
+    tools:listitem="@android:layout/simple_spinner_item"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/txt_select_type_eat"
+    app:layout_constraintVertical_bias="0.19" />
+</androidx.constraintlayout.widget.ConstraintLayout>

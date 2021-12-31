@@ -3,11 +3,27 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/dev/workspace/swantech/DrawerMenu/app/src/main/res/layout/activity_main.xml" value="0.2" />
-        <entry key="..\:/dev/workspace/swantech/DrawerMenu/app/src/main/res/layout/appbar_layout.xml" value="0.19487179487179487" />
-        <entry key="..\:/dev/workspace/swantech/DrawerMenu/app/src/main/res/layout/header_menu.xml" value="0.2" />
-        <entry key="..\:/dev/workspace/swantech/DrawerMenu/app/src/main/res/layout/item_person.xml" value="0.264" />
-        <entry key="..\:/dev/workspace/swantech/DrawerMenu/app/src/main/res/menu/menu_main.xml" value="0.2" />
+        <entry key="..\:/dev/workspace/Work2/app/src/main/res/drawable-v24/bg_gradient_send.xml" value="0.23421052631578948" />
+        <entry key="..\:/dev/workspace/Work2/app/src/main/res/drawable-v24/bg_ticket_msg_user.xml" value="0.23421052631578948" />
+        <entry key="..\:/dev/workspace/Work2/app/src/main/res/drawable-v24/bg_toolbar_eat.xml" value="0.23421052631578948" />
+        <entry key="..\:/dev/workspace/Work2/app/src/main/res/drawable/bg_button_gradient.xml" value="0.23116883116883116" />
+        <entry key="..\:/dev/workspace/Work2/app/src/main/res/drawable/bg_edt_color.xml" value="0.23116883116883116" />
+        <entry key="..\:/dev/workspace/Work2/app/src/main/res/drawable/bg_gradient_edt.xml" value="0.23421052631578948" />
+        <entry key="..\:/dev/workspace/Work2/app/src/main/res/drawable/bg_item_rv_active_step_circle.xml" value="0.27384615384615385" />
+        <entry key="..\:/dev/workspace/Work2/app/src/main/res/drawable/bg_ticket_msg.xml" value="0.23421052631578948" />
+        <entry key="..\:/dev/workspace/Work2/app/src/main/res/drawable/bg_toolbar.xml" value="0.19537037037037036" />
+        <entry key="..\:/dev/workspace/Work2/app/src/main/res/drawable/ic_baseline_chevron_left_24.xml" value="0.23116883116883116" />
+        <entry key="..\:/dev/workspace/Work2/app/src/main/res/drawable/item_rv_active_step.xml" value="0.27384615384615385" />
+        <entry key="..\:/dev/workspace/Work2/app/src/main/res/layout/activity_active_lesson.xml" value="0.264" />
+        <entry key="..\:/dev/workspace/Work2/app/src/main/res/layout/activity_home.xml" value="0.264" />
+        <entry key="..\:/dev/workspace/Work2/app/src/main/res/layout/activity_main.xml" value="0.26197916666666665" />
+        <entry key="..\:/dev/workspace/Work2/app/src/main/res/layout/activity_new_eat.xml" value="0.2206140350877193" />
+        <entry key="..\:/dev/workspace/Work2/app/src/main/res/layout/activity_result.xml" value="0.2206140350877193" />
+        <entry key="..\:/dev/workspace/Work2/app/src/main/res/layout/activity_ticket.xml" value="0.2206140350877193" />
+        <entry key="..\:/dev/workspace/Work2/app/src/main/res/layout/item_rv_active_lesson.xml" value="0.2206140350877193" />
+        <entry key="..\:/dev/workspace/Work2/app/src/main/res/layout/item_rv_active_step.xml" value="0.264" />
+        <entry key="..\:/dev/workspace/Work2/app/src/main/res/layout/item_rv_ticket_admin_msg.xml" value="0.2206140350877193" />
+        <entry key="..\:/dev/workspace/Work2/app/src/main/res/layout/item_rv_ticket_user_msg.xml" value="0.2206140350877193" />
       </map>
     </option>
   </component>
