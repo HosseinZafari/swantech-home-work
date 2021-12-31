@@ -6,9 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
-import com.example.drawermenu.PersonModel
 import com.example.drawermenu.R
-import java.util.zip.Inflater
 
 /*
 
@@ -18,32 +16,30 @@ import java.util.zip.Inflater
 @email  hosseinzafari2000@gmail.com 
 */
 
-class PersonAdapter (
+class TimeAdapter (
     val context: Context
-): RecyclerView.Adapter<PersonAdapter.PersonViewHolder>() {
+): RecyclerView.Adapter<TimeAdapter.TimeViewHolder>() {
 
-    var data = mutableListOf<PersonModel>()
+    var data = mutableListOf<String>()
         set(value) {
             field = value
             notifyDataSetChanged()
         }
 
-    class PersonViewHolder(
+    class TimeViewHolder(
         view: View ,
-        val txt_name: TextView = view.findViewById(R.id.txt_name) ,
-        val txt_phone: TextView = view.findViewById(R.id.txt_phone) ,
-        val txt_email: TextView = view.findViewById(R.id.txt_email) ,
+        val txt_time: TextView = view.findViewById(R.id.txt_time) ,
     ) : RecyclerView.ViewHolder(view)
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int) =
-        PersonViewHolder(LayoutInflater.from(context).inflate(R.layout.item_person , parent , false))
+         TimeViewHolder(
+            LayoutInflater.from(context).inflate(R.layout.item_time, parent, false)
+        )
 
-    override fun onBindViewHolder(holder: PersonViewHolder, position: Int) {
+    override fun onBindViewHolder(holder: TimeViewHolder, position: Int) {
         val item = data[position]
         holder.apply {
-            txt_name.text  = item.name
-            txt_email.text = item.email
-            txt_phone.text = item.phone
+            txt_time.text  = item
         }
     }
 

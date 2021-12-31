@@ -1,6 +1,5 @@
 package com.example.drawermenu
 
-import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.system.Os.close
@@ -14,39 +13,34 @@ import androidx.drawerlayout.widget.DrawerLayout
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.drawermenu.adapter.EngineAdapter
+import com.example.drawermenu.adapter.TimeAdapter
 import com.google.android.material.navigation.NavigationView
 
-class MainActivity : AppCompatActivity() {
+class TimeActivity : AppCompatActivity() {
 
-    val adapter = EngineAdapter(this , ::onClickEvent)
+    val adapter = TimeAdapter(this )
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        setContentView(R.layout.activity_time)
 
-
-        val rv_engine = findViewById<RecyclerView>(R.id.rv_engine)
-        rv_engine.layoutManager = LinearLayoutManager(this , LinearLayoutManager.VERTICAL , false)
-        rv_engine.adapter = adapter
+        val rv_time = findViewById<RecyclerView>(R.id.rv_time)
+        rv_time.layoutManager = LinearLayoutManager(this , LinearLayoutManager.VERTICAL , false)
+        rv_time.adapter = adapter
         adapter.data = getData().toMutableList()
+
     }
 
-    fun onClickEvent(str: String) {
-        val bundle = Bundle()
-        bundle.putString("engine"  , str)
-        val intent = Intent(this , TimeActivity::class.java )
-        intent.putExtra("bun" , bundle)
-        startActivity(intent)
-    }
+
 
     fun getData() = listOf(
-        "Engine 1" ,
-        "Engine 2" ,
-        "Engine 3" ,
-        "Engine 4" ,
-        "Engine 5" ,
-        "Engine 6" ,
-        "Engine 7" ,
+        "02:00" ,
+        "02:20" ,
+        "22:00" ,
+        "05:30" ,
+        "12:00" ,
+        "11:00" ,
+        "5:00" ,
     )
 
 }
