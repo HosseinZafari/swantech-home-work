@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+  <group android:checkableBehavior="single">
+
+    <item
+      android:id="@+id/menu_feed"
+      android:checked="true"
+      android:icon="@drawable/ic_feed"
+      android:title="Feed" />
+
+    <item
+      android:id="@+id/menu_person"
+      android:icon="@drawable/ic_baseline_person_24"
+      android:title="Person" />
+
+    <item
+      android:id="@+id/menu_event"
+      android:icon="@drawable/ic_event"
+      android:title="Events" />
+
+    <item
+      android:id="@+id/menu_post"
+      android:icon="@drawable/ic_post"
+      android:title="Posts" />
+
+    <item
+      android:id="@+id/menu_notification"
+      android:icon="@drawable/ic_notification"
+      android:title="Notify" />
+
+    <item
+      android:id="@+id/menu_logout"
+      android:icon="@drawable/ic_logout"
+      android:title="Logout" />
+
+  </group>
+</menu>
