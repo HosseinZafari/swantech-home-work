@@ -13,15 +13,6 @@
     android:supportsRtl="true"
     android:theme="@style/Theme.DrawerMenu"
     tools:targetApi="31">
-    <activity
-      android:name=".fragments.EngineFragment"
-      android:exported="true">
-
-    </activity>
-
-    <activity
-      android:name=".fragments.TimeFragment"
-      android:exported="true" />
 
     <activity
       android:name=".MainActivity"

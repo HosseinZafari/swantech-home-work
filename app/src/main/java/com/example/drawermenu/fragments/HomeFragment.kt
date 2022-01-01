@@ -48,12 +48,16 @@ class HomeFragment (
         val card_profile = view.findViewById<LinearLayoutCompat>(R.id.card_profile)
         val card_output = view.findViewById<LinearLayoutCompat>(R.id.card_output)
         val card_parameter = view.findViewById<LinearLayoutCompat>(R.id.card_parameter)
+        val card_report = view.findViewById<LinearLayoutCompat>(R.id.card_report)
         card_profile.setOnClickListener {
             onNavigate(Navigate.Profile)
         }
 
         card_parameter.setOnClickListener {
             onNavigate(Navigate.Engine)
+        }
+        card_report.setOnClickListener {
+            onNavigate(Navigate.Report)
         }
 
     }

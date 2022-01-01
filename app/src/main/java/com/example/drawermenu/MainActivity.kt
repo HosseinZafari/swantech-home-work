@@ -4,10 +4,7 @@ import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.LinearLayoutCompat
 import androidx.fragment.app.Fragment
-import com.example.drawermenu.fragments.EngineFragment
-import com.example.drawermenu.fragments.HomeFragment
-import com.example.drawermenu.fragments.ProfileFragment
-import com.example.drawermenu.fragments.TimeFragment
+import com.example.drawermenu.fragments.*
 
 /*
 
@@ -23,6 +20,7 @@ class MainActivity : AppCompatActivity() {
     lateinit var profileFragment: ProfileFragment
     lateinit var timeFragment: TimeFragment
     lateinit var engineFragment: EngineFragment
+    lateinit var reportFragment: ReportFragment
     lateinit var currentFragment: Fragment
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -34,6 +32,7 @@ class MainActivity : AppCompatActivity() {
         engineFragment = EngineFragment(::onNavigate)
         profileFragment = ProfileFragment()
         timeFragment = TimeFragment()
+        reportFragment = ReportFragment()
 
         goTo(homeFragment , "Home")
     }
@@ -53,7 +52,7 @@ class MainActivity : AppCompatActivity() {
             }
 
             Navigate.Report -> {
-                goTo(profileFragment , "Profile")
+                goTo(reportFragment , "Report")
             }
 
             Navigate.Engine -> {

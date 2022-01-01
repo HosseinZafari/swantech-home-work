@@ -23,7 +23,7 @@ class EngineFragment(
         savedInstanceState: Bundle?
     ): View? {
         adapter = EngineAdapter(requireContext() , ::onClickEvent)
-        return  inflater.inflate(R.layout.activity_engine , container , false)
+        return  inflater.inflate(R.layout.fragment_engine , container , false)
     }
 
 
