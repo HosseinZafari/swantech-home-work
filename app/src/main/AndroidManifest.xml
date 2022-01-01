@@ -14,18 +14,29 @@
     android:theme="@style/Theme.DrawerMenu"
     tools:targetApi="31">
     <activity
-      android:name=".MainActivity"
+      android:name=".fragments.EngineFragment"
       android:exported="true">
+
+    </activity>
+
+    <activity
+      android:name=".fragments.TimeFragment"
+      android:exported="true" />
+
+    <activity
+      android:name=".MainActivity"
+      android:exported="true" />
+
+    <activity
+      android:name=".AuthActivity"
+      android:exported="true" >
       <intent-filter>
         <action android:name="android.intent.action.MAIN" />
 
         <category android:name="android.intent.category.LAUNCHER" />
       </intent-filter>
-    </activity>
 
-    <activity
-      android:name=".TimeActivity"
-      android:exported="true" />
+    </activity>
 
   </application>
 
