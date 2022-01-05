@@ -65,11 +65,10 @@ class VideoFragment : Fragment() {
 
 
         btn_play.setOnClickListener {
-            val link = edt_url.text
-            Log.i("TEST" , "" + link)
-            val uri = Uri.parse(link.toString())
-            video_view.setVideoURI(uri)
-            MainActivity.videoList.add(link.toString())
+            val link = edt_url.text.toString()
+            video_view.setVideoURI(Uri.parse(link))
+            video_view.start()
+            MainActivity.videoList.add(link)
         }
 
     }
