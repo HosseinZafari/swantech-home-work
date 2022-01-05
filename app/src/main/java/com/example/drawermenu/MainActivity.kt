@@ -1,113 +1,66 @@
 package com.example.drawermenu
 
+import android.content.ClipData
+import android.content.ClipboardManager
+import android.content.Context
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.system.Os.close
-import android.util.Log
-import android.view.MenuItem
-import android.widget.FrameLayout
-import android.widget.ImageButton
-import androidx.appcompat.app.ActionBarDrawerToggle
-import androidx.core.view.GravityCompat
-import androidx.drawerlayout.widget.DrawerLayout
-import com.example.drawermenu.fragment.HomeFragment
-import com.example.drawermenu.fragment.PersonFragment
-import com.google.android.material.navigation.NavigationView
+import android.widget.Toast
+import androidx.viewpager2.widget.ViewPager2
+import com.example.drawermenu.adapter.PagerTabAdapter
+import com.example.drawermenu.fragment.WebFragment
+import com.example.drawermenu.fragment.LinkFragment
+import com.example.drawermenu.fragment.VideoFragment
+import com.google.android.material.tabs.TabLayout
+import com.google.android.material.tabs.TabLayoutMediator
 
 class MainActivity : AppCompatActivity() {
 
-    lateinit var navigationView: NavigationView
-    lateinit var drawer: DrawerLayout
-    lateinit var actionBarDrawerToggle : ActionBarDrawerToggle
-//    lateinit var frameLayout: FrameLayout
-    val personFragment = PersonFragment()
-    val homeFragment = HomeFragment()
+    private val pagerTabAdapter = PagerTabAdapter(this , ::onLongClickBrowser)
+    private lateinit var viewPager: ViewPager2
+    private lateinit var tabLayout: TabLayout
 
+    private val titleList = listOf(
+        "Browser" ,
+        "Last Seen" ,
+        "Play Video"
+    )
+
+    companion object {
+        var url_video = ""
+        var videoList = mutableListOf<String>()
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        setSupportActionBar(findViewById(R.id.toolbar))
-        navigationView = findViewById<NavigationView>(R.id.nav_main)
-        drawer = findViewById<DrawerLayout>(R.id.drawer)
-//        frameLayout = findViewById<FrameLayout>(R.id.frame_view_main)
-        navigationView.setCheckedItem(R.id.menu_feed)
 
-        actionBarDrawerToggle = ActionBarDrawerToggle(this , drawer , R.string.open , R.string.close)
-        drawer.addDrawerListener(actionBarDrawerToggle)
+        setupViews()
 
-        actionBarDrawerToggle.syncState()
-        supportActionBar?.setDisplayHomeAsUpEnabled(true)
-        val header = navigationView.getHeaderView(0)
-        val imgButton = header.findViewById<ImageButton>(R.id.img_close)
-
-        imgButton.setOnClickListener {
-            drawer.closeDrawer(GravityCompat.START)
-        }
-
-        supportFragmentManager
-            .beginTransaction()
-            .replace(R.id.frame_view_main , homeFragment  , "Home")
-            .commit()
-
-        navigationView.setNavigationItemSelectedListener {
-            it.setChecked(true)
-            setTitle(it.title)
-            return@setNavigationItemSelectedListener when(it.itemId)  {
-                R.id.menu_feed -> {
-                    supportFragmentManager
-                        .beginTransaction()
-                        .replace(R.id.frame_view_main , homeFragment  , "Home")
-                        .commit()
-                        drawer.closeDrawers()
-                    Log.i("Test" , "Menu Feed")
-                    true
-                }
-
-                R.id.menu_person -> {
-                    supportFragmentManager
-                        .beginTransaction()
-                        .replace(R.id.frame_view_main , personFragment , "Person")
-                        .commit()
-                        drawer.closeDrawers()
-                    Log.i("Test" , "Menu person")
-                    true
-                }
-                R.id.menu_event -> {
-                    Log.i("Test" , "Menu event")
-                    true
-                }
-
-                R.id.menu_logout -> {
-                    Log.i("Test" , "Menu logout")
-                    true
-                }
-
-                R.id.menu_post -> {
-                    Log.i("Test" , "Menu post")
-                    true
-                }
-
-                R.id.menu_notification -> {
-                    Log.i("Test" , "Menu notification")
-                    true
-                }
-                else -> false
-            }
-
-        }
     }
 
-    override fun onBackPressed() {
-        if (drawer.isDrawerOpen(GravityCompat.START)) {
-            drawer.closeDrawer(GravityCompat.START)
-        } else {
-            super.onBackPressed()
-        }
+    private fun setupViews() {
+        viewPager = findViewById<ViewPager2>(R.id.viewpager_main)
+        tabLayout = findViewById<TabLayout>(R.id.tablayout_main)
+
+        viewPager.adapter = pagerTabAdapter
+        TabLayoutMediator(tabLayout , viewPager , true) { tab , index ->
+            val title = titleList[index]
+            tab.text  = title
+        }.attach()
+
     }
 
-    override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        return actionBarDrawerToggle.onOptionsItemSelected(item)
+
+
+    private fun onLongClickBrowser(link: String) {
+        val clipboardManager = getSystemService(Context.CLIPBOARD_SERVICE) as ClipboardManager
+        val data = ClipData.newPlainText("urlvideo" , link)
+        clipboardManager.setPrimaryClip(data)
+
+
+        Toast.makeText(this , "لینک شما کپی شد" , Toast.LENGTH_LONG).show()
+        viewPager.currentItem = 2
     }
 }
